@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archit Badoni - AI/ML Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Archit Badoni - AI/ML Engineer and Full-Stack Developer specializing in Computer Vision and Modern Web Technologies">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Archit Badoni</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hello, I'm <span class="gradient-text">Archit Badoni</span>
+                    </h1>
+                    <div class="hero-typewriter">
+                        <span class="typewriter-text" id="typewriter"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        AI/ML-focused Computer Science student with experience building production-ready computer vision applications. 
+                        Combining strong programming foundation with modern ML frameworks and full-stack development skills.
+                    </p>
+                    <div class="hero-buttons">
+    <a href="#projects" class="btn btn-primary">
+        <i class="fas fa-rocket"></i>
+        View Projects
+    </a>
+    <a href="Archit_resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-download"></i>
+        Download Resume
+    </a>
+    <a href="#contact" class="btn btn-outline">
+        <i class="fas fa-envelope"></i>
+        Contact Me
+    </a>
+</div>
+
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-img">
+    <img src="profile.jpg" alt="Archit Badoni - AI/ML Engineer" class="profile-photo">
+</div>
+
+                        <div class="social-links">
+    <a href="mailto:archit.badoni1015@gmail.com" title="Email" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="tel:+919997294048" title="Phone" aria-label="Phone">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Archit1030" title="GitHub" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://leetcode.com/u/ArchitBadoni/" title="LeetCode" aria-label="LeetCode" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-code"></i>
+    </a>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background and journey</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Education</h3>
+                            <h4>B.Tech in Computer Science Engineering (AI&ML)</h4>
+                            <p>Manipal University Jaipur</p>
+                            <p class="duration">2023-2027</p>
+                            <p class="cgpa">CGPA: 7.38</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <p class="lead">
+                        I'm an AI/ML-focused Computer Science student with a passion for creating innovative solutions 
+                        that bridge the gap between cutting-edge technology and real-world applications.
+                    </p>
+                    <p>
+                        My expertise lies in developing production-ready computer vision applications, having created 
+                        systems like SmartHairAI for facial analysis and Universal Home AI for real-time security monitoring. 
+                        I combine a strong programming foundation in Python and C++ with modern ML frameworks like PyTorch and YOLOv8.
+                    </p>
+                    <p>
+                        Beyond machine learning, I'm skilled in full-stack development, working with technologies like 
+                        FastAPI, React, and WebSockets to create responsive, real-time applications. My goal is to 
+                        leverage AI and modern web technologies to solve complex problems and create meaningful impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid" id="skills-grid">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work and innovations</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-project="0">
+                    <div class="project-image">
+                        <img src="SHAI.png" alt="SmartHairAI facial similarity and hairstyle recommendation system" class="project-thumb" loading="lazy">
+                        <div class="project-overlay">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">SmartHairAI</h3>
+                            <span class="project-status ongoing">Ongoing</span>
+                        </div>
+                        <p class="project-description">
+                            AI-powered facial recognition system processing 13,000+ celebrity images for hairstyle recommendations. 
+                            Features 128-dimensional facial encodings and optimized pickle serialization for 90% faster load times.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Face Recognition</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <img src="UHAI.png" alt="Universal Home AI real-time smart home security dashboard" class="project-thumb" loading="lazy">
+                        <div class="project-overlay">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Universal Home AI</h3>
+                            <span class="project-status completed">Completed</span>
+                        </div>
+                        <p class="project-description">
+                            Real-time smart home security system with YOLOv8 object detection. Features FastAPI backend, 
+                            React dashboard with WebSocket integration for instant alerts and live camera analysis.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">WebSockets</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Archit1030/Universal-Home-Organization-AI" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Professional achievements and learning milestones</p>
+            </div>
+
+            <div class="certifications-grid" id="certifications-grid">
+                <!-- Certifications will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>archit.badoni1015@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 9997294048</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Jaipur, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Archit Badoni. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
