@@ -452,49 +452,121 @@ body {
 }
 
 /* Mobile responsive adjustments */
+/* Fixed Mobile Navigation Styles */
 @media (max-width: 768px) {
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
+  /* Make navbar more compact */
+  .navbar {
+    padding: 0;
+    height: 60px; /* Fixed height */
+  }
+  
+  .nav-container {
+    padding: 0.75rem 1rem; /* Reduced padding */
+    height: 60px;
+    align-items: center;
+  }
+  
+  .nav-logo a {
+    font-size: 1.2rem; /* Smaller logo */
+  }
+  
+  /* Fix the mobile menu */
+  .nav-menu {
+    position: fixed;
+    top: 60px; /* Start below navbar */
+    left: -100%; /* Hidden by default */
+    width: 100%;
+    height: calc(100vh - 60px); /* Take remaining screen height */
+    background: rgba(19, 52, 59, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  
+  .nav-menu.active {
+    left: 0; /* Show menu */
+  }
+  
+  /* Make nav links bigger for touch */
+  .nav-link {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Fix theme toggle in mobile menu */
+  .theme-toggle {
+    align-self: flex-start;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+  }
+  
+  /* Hamburger menu styling */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 4px;
+    z-index: 1001;
+  }
+  
+  .nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-text);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+  
+  /* Hamburger animation */
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Prevent body scroll when menu is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+  
+  /* Fix hero section spacing */
+  .hero {
+    padding-top: 60px; /* Account for fixed navbar height */
+  }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-logo a {
+    font-size: 1.1rem;
+  }
+  
+  .nav-menu {
+    padding: 1.5rem;
+  }
 }
 
-
-.profile-placeholder {
-  font-size: 4rem;
-  color: white;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-links a {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(var(--color-teal-500-rgb), 0.3);
-}
 
 /* About Section */
 .about {
