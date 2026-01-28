@@ -8,27 +8,46 @@ let typewriterTimeout;
 // Role texts for typewriter effect
 const roles = [
     'AI/ML Engineer',
-    'Full-Stack Developer',
+    'Backend Developer',
     'Computer Vision Specialist',
-    'Data Science Enthusiast'
+    'Full-Stack Developer'
 ];
 
 // Project data with images
 const projectData = [
     {
-        title: 'SmartHairAI – AI-Based Facial Similarity & Hairstyle Recommendation System',
-        description: 'Developed facial recognition system processing 13,000+ celebrity images using OpenCV and face_recognition library to extract 128-dimensional encodings. Built full-stack solution with Flask backend and responsive frontend, implementing pickle serialization for 90% faster load times and distance-based similarity matching for salon hairstyle recommendations.',
-        fullDescription: 'SmartHairAI is an advanced AI-powered system that revolutionizes the way people choose hairstyles. The system processes over 13,000 celebrity images to build a comprehensive database of facial features and corresponding hairstyles. Using computer vision techniques with OpenCV and the face_recognition library, it extracts 128-dimensional facial encodings that capture unique facial characteristics. The application features a Flask backend with optimized pickle serialization for 90% faster load times and implements sophisticated distance-based similarity matching algorithms to recommend hairstyles that complement individual facial features. The system includes real-time facial analysis, celebrity look-alike matching, and personalized hairstyle recommendations based on facial geometry and structure.',
-        techStack: ['Python', 'Flask', 'OpenCV', 'face_recognition', 'HTML', 'CSS', 'JavaScript', 'Machine Learning', 'Computer Vision', 'Pickle Serialization'],
-        status: 'Ongoing',
-        github: null,
-        image: 'SHAI.jpg'
+        title: 'Document Summarization & Video Generation API',
+        description: 'Built a production-grade REST API for intelligent multi-format document summarization with automated video generation and enterprise-level controls. Features multi-provider LLM pipeline using Groq LLaMA 3.1, Ollama, and Google Gemini with ~95% confidence and automated video generation using Manim animations.',
+        fullDescription: 'A comprehensive production-ready AI system that transforms documents into intelligent summaries and automated video content. The system features a multi-provider LLM pipeline using Groq LLaMA 3.1, Ollama, and Google Gemini with intelligent fallback mechanisms achieving ~95% confidence. Automated video generation is powered by Manim animations with Edge TTS and ElevenLabs narration. The FastAPI + PostgreSQL backend includes async workers, API key authentication, rate limiting (120 req/min), and secure video downloads. The entire system is Dockerized with comprehensive logging, pytest-based async testing, and resource cleanup policies for enterprise deployment.',
+        techStack: ['Python', 'FastAPI', 'PostgreSQL', 'Groq API', 'Google Gemini', 'Manim', 'Docker', 'LLM Integration', 'Async Processing'],
+        status: 'Production-ready',
+        github: 'https://github.com/Archit1030/document-summarization-api',
+        image: 'doc-api.jpg'
     },
     {
-        title: 'Universal Home AI – Real-Time Smart Home Security Dashboard',
-        description: 'Built AI-powered security system with YOLOv8 object detection and real-time video streaming via FastAPI backend. Developed responsive React dashboard with WebSocket integration for instant alerts and live camera feed analysis, optimized for low-latency performance across multiple environments.',
-        fullDescription: 'Universal Home AI is a comprehensive smart home security solution that leverages cutting-edge AI technology for real-time threat detection and monitoring. The system utilizes YOLOv8, one of the most advanced object detection models, to identify and classify various objects, people, and potential security threats in real-time video feeds. The FastAPI backend ensures high-performance processing and real-time video streaming capabilities, while the React dashboard provides an intuitive and responsive user interface. WebSocket integration enables instant push notifications and real-time updates, ensuring homeowners are immediately alerted to any security events. The system is optimized for low-latency performance and can handle multiple camera feeds simultaneously, making it suitable for comprehensive home security monitoring.',
-        techStack: ['Python', 'FastAPI', 'PyTorch', 'YOLOv8', 'OpenCV', 'React', 'TailwindCSS', 'WebSockets', 'Real-time Processing', 'Computer Vision'],
+        title: 'Interview Mirror — AI-Powered Interview Coaching Platform',
+        description: 'Real-time AI interview coaching system using MediaPipe Holistic to track 543 body landmarks for posture, stress, gesture, and gaze-based integrity analysis. Achieved ~15 FPS processing with <100ms latency and integrated Google Gemini for NLP-driven feedback.',
+        fullDescription: 'Interview Mirror is a cutting-edge AI-powered interview coaching platform that provides real-time behavioral analysis and feedback. The system uses MediaPipe Holistic to track 543 body landmarks, enabling comprehensive analysis of posture, stress levels, gestures, and gaze-based integrity. Four specialized behavioral analyzers work with signal smoothing (One Euro Filter) to achieve ~15 FPS processing with <100ms latency. The platform integrates Google Gemini for NLP-driven feedback, fusing vision metrics with text signals into a sophisticated scoring engine. Built as a full-stack application with FastAPI backend featuring async WebSocket streams, React + TypeScript frontend, intelligent caching, and robust error handling. Achieved production-level performance with ≥95% pose detection accuracy and ≥90% gesture recognition while reducing API quota usage by 40% through intelligent caching.',
+        techStack: ['Python', 'MediaPipe Holistic', 'OpenCV', 'FastAPI', 'WebSockets', 'React', 'TypeScript', 'TailwindCSS', 'Google Gemini', 'Computer Vision'],
+        status: 'Completed',
+        github: null,
+        image: 'Interview_mirror.mp4'
+    },
+    {
+        title: 'FloatChat AI — Oceanographic Data Intelligence Platform',
+        description: 'Built a platform processing 122,000+ ARGO measurements for interactive visualizations and NLP-based scientific queries. Features FastAPI + PostgreSQL backend with normalized NetCDF ingestion and optimized time-series queries, deployed on Railway and Streamlit Cloud.',
+        fullDescription: 'FloatChat AI is an advanced oceanographic data intelligence platform that processes over 122,000 ARGO measurements to provide interactive visualizations and NLP-based scientific queries. The system features a robust FastAPI + PostgreSQL backend with normalized NetCDF data ingestion and optimized time-series queries for efficient data retrieval. The platform includes a comprehensive Streamlit dashboard with Plotly visualizations for data exploration and analysis. The system is professionally deployed using Railway for the backend services and Streamlit Cloud for the frontend interface, ensuring reliable access and scalability for scientific research applications.',
+        techStack: ['Python', 'FastAPI', 'PostgreSQL', 'Pandas', 'Streamlit', 'Plotly', 'Hugging Face', 'NetCDF', 'Data Science'],
+        status: 'Completed',
+        github: 'https://github.com/Archit1030/FloatChat-AI',
+        liveDemo: 'https://flowchat-ai.streamlit.app',
+        image: 'Float_chat.png'
+    },
+    {
+        title: 'Universal Home Organization AI',
+        description: 'Developed a real-time home organization system using YOLOv8 and OpenCV for object detection and classification. Features Flask REST API with React frontend for live visualization and spatial categorization.',
+        fullDescription: 'Universal Home Organization AI is a sophisticated computer vision system designed for real-time home organization and object management. The system leverages YOLOv8 for accurate object detection and classification, combined with OpenCV for advanced image processing capabilities. The architecture includes a Flask REST API backend that handles real-time video processing and object recognition, paired with a responsive React frontend that provides live visualization and spatial categorization of detected objects. The system enables users to efficiently organize and track household items through intelligent computer vision analysis.',
+        techStack: ['Python', 'YOLOv8', 'OpenCV', 'Flask', 'React', 'Computer Vision', 'Object Detection'],
         status: 'Completed',
         github: 'https://github.com/Archit1030/Universal-Home-Organization-AI',
         image: 'UHAI.jpg'
@@ -42,25 +61,25 @@ const skillsData = {
         background: 'var(--color-bg-1)',
         skills: [
             { name: 'Python', level: 'Advanced' },
+            { name: 'SQL', level: 'Advanced' },
             { name: 'C++', level: 'Intermediate' },
-            { name: 'SQL', level: 'Intermediate' },
             { name: 'JavaScript', level: 'Intermediate' }
         ]
     },
     'AI/ML Technologies': {
         icon: 'fas fa-brain',
         background: 'var(--color-bg-2)',
-        skills: ['OpenCV', 'PyTorch', 'YOLOv8', 'DeepFace', 'Face Recognition', 'NumPy', 'Pandas', 'Statistics']
+        skills: ['PyTorch', 'Hugging Face', 'OpenCV', 'YOLOv8', 'DeepFace', 'NumPy', 'Pandas', 'Statistics', 'MediaPipe']
     },
-    'Web Development': {
-        icon: 'fas fa-globe',
+    'Backend & Web Development': {
+        icon: 'fas fa-server',
         background: 'var(--color-bg-3)',
-        skills: ['FastAPI', 'React', 'TailwindCSS', 'WebSockets', 'REST APIs']
+        skills: ['FastAPI', 'REST APIs', 'WebSockets', 'React', 'TailwindCSS', 'TypeScript', 'Docker']
     },
-    'Tools & Databases': {
+    'Databases & Tools': {
         icon: 'fas fa-database',
         background: 'var(--color-bg-4)',
-        skills: ['Oracle', 'SQL', 'Database Design', 'Git/GitHub', 'DSA', 'OOP']
+        skills: ['PostgreSQL', 'Oracle SQL', 'Database Design', 'Git/GitHub', 'DSA', 'OOP']
     }
 };
 
@@ -69,32 +88,26 @@ const certificationsData = [
     {
         name: 'Database Design',
         issuer: 'Oracle Academy',
-        date: '14th November, 2024',
+        date: 'November 2024',
         icon: 'fas fa-database'
-    },
-    {
-        name: 'Database Foundations',
-        issuer: 'Oracle Academy',
-        date: '16th November, 2024',
-        icon: 'fas fa-server'
     },
     {
         name: 'Database Programming with SQL',
         issuer: 'Oracle Academy',
-        date: '20th November, 2024',
+        date: 'November 2024',
         icon: 'fas fa-code'
     },
     {
-        name: 'Python Essentials 1&2',
-        issuer: 'Cisco Academy',
-        date: '14th October, 2024',
-        icon: 'fab fa-python'
+        name: 'Data Structures and Algorithms',
+        issuer: 'CodeChef',
+        date: 'November 2024',
+        icon: 'fas fa-sitemap'
     },
     {
-        name: 'Data Structures and Algorithms',
-        issuer: 'Codechef',
-        date: '19th November, 2024',
-        icon: 'fas fa-sitemap'
+        name: 'Python Essentials 1 & 2',
+        issuer: 'Cisco Academy',
+        date: 'October 2024',
+        icon: 'fab fa-python'
     }
 ];
 
@@ -415,14 +428,38 @@ function openProjectModal(projectIndex) {
 
     if (!modal || !modalBody || !project) return;
 
+    const linksHtml = [];
+    if (project.liveDemo) {
+        linksHtml.push(`
+            <a href="${project.liveDemo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+            </a>
+        `);
+    }
+    if (project.github) {
+        linksHtml.push(`
+            <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fab fa-github"></i>
+                View on GitHub
+            </a>
+        `);
+    }
+
+    // Check if the media is a video or image
+    const isVideo = project.image.endsWith('.mp4');
+    const mediaHtml = isVideo 
+        ? `<video src="${project.image}" controls style="width: 100%; border-radius: 15px; margin-bottom: 2rem;">Your browser does not support the video tag.</video>`
+        : `<img src="${project.image}" alt="${project.title}" style="width: 100%; border-radius: 15px; margin-bottom: 2rem;">`;
+
     modalBody.innerHTML = `
         <div class="project-modal-content">
             <div class="project-modal-image">
-                <img src="${project.image}" alt="${project.title}" style="width: 100%; border-radius: 15px; margin-bottom: 2rem;">
+                ${mediaHtml}
             </div>
             <div class="project-modal-header">
                 <h2 style="color: var(--color-text); margin-bottom: 1rem; font-size: 1.8rem;">${project.title}</h2>
-                <span class="project-status ${project.status.toLowerCase()}" style="margin-bottom: 2rem; display: inline-block;">${project.status}</span>
+                <span class="project-status ${project.status.toLowerCase().replace(/[^a-z]/g, '')}" style="margin-bottom: 2rem; display: inline-block;">${project.status}</span>
             </div>
             <div class="project-modal-description">
                 <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 2rem; font-size: 1.1rem;">
@@ -435,12 +472,9 @@ function openProjectModal(projectIndex) {
                     ${project.techStack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
             </div>
-            ${project.github ? `
-                <div class="project-modal-links">
-                    <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="fab fa-github"></i>
-                        View on GitHub
-                    </a>
+            ${linksHtml.length > 0 ? `
+                <div class="project-modal-links" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    ${linksHtml.join('')}
                 </div>
             ` : ''}
         </div>

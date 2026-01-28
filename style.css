@@ -729,6 +729,10 @@ body {
   transition: transform 0.5s ease;
 }
 
+.project-thumb[src$=".mp4"] {
+  object-fit: cover;
+}
+
 .project-card:hover .project-thumb {
   transform: scale(1.05);
 }
@@ -791,6 +795,11 @@ body {
 .project-status.completed {
   background: var(--color-bg-3);
   color: #059669;
+}
+
+.project-status.productionready {
+  background: var(--color-bg-1);
+  color: #2563eb;
 }
 
 .project-description {
